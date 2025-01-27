@@ -1,0 +1,19 @@
+spring:
+  kafka:
+    consumer:
+      group-id: group-id
+    bootstrap-servers: localhost:19092
+
+  data:
+    mongodb:
+      authentication-database: admin
+      database: ${MONGO_DATABASE}
+      host: ${MONGO_HOST}
+      port: ${MONGO_PORT}
+      username: ${MONGO_USERNAME}
+      password: ${MONGO_PASSWORD}
+
+    redis:
+      host: ${REDIS_HOST}
+      password: ${REDIS_PASSWORD}
+      port: ${REDIS_PORT}

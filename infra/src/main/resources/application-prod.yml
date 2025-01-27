@@ -1,0 +1,51 @@
+spring:
+  kafka:
+    admin:
+      auto-create: true
+    consumer:
+      group-id: group-id
+    properties:
+      enable.idempotence: true
+    bootstrap-servers: ${KAFKA_BOOSTRAP_SERVERS}
+
+  data:
+    redis:
+      host: ${REDIS_HOST}
+      password: ${REDIS_PASSWORD}
+      port: ${REDIS_PORT}
+    data:
+      mongodb:
+        database: ${MONGO_DATABASE}
+        host: ${MONGO_HOST}
+        port: ${MONGO_PORT}
+        username: ${MONGO_USERNAME}
+        password: ${MONGO_PASSWORD}
+
+  mail:
+    host: smtp.gmail.com
+    port: ${MAIL_PORT}
+    username: ${MAIL_USERNAME}
+    password: ${MAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: ${MAIL_CONNECTION_TIMEOUT}
+          timeout: ${MAIL_TIMEOUT}
+          writetimeout: ${MAIL_WRITE_TIMEOUT}
+          smtp:
+          starttls:
+            enable: true
+
+payconstants:
+  iyzicoSecretKey: ${IYZICO_SECRET_KEY}
+  iyzicoApiKey: ${IYZICO_API_KEY}
+  iyzicoBaseUrl: ${IYZICO_BASE_URL}
+  iyzicoCallbackUrl: ${IYZICO_CALLBACK_URL}
+
+
+jwt:
+  secretKey: ${JWT_SECRET_KEY}
+  tokenPrefix: ${JWT_TOKEN_PREFIX}
+  tokenExpirationForVerification: ${JWT_TOKEN_EXPIRATION_FOR_VERIFICATION}
+  tokenExpirationForLogin: ${JWT_TOKEN_EXPIRATION_FOR_LOGIN}

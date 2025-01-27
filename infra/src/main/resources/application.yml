@@ -1,0 +1,37 @@
+server:
+  port: 8097
+spring:
+  profiles:
+    active: local
+  kafka:
+    bootstrap-servers: localhost:19092
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: martulas5252@gmail.com
+    password: erlptpvknkacfrmp
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          smtp:
+          starttls:
+            enable: true
+
+payconstants:
+  iyzicoSecretKey: iyzico_secret_key
+  iyzicoApiKey: iyzico_sandbox_key
+  iyzicoBaseUrl: iyzico_sandbox_url
+  iyzicoCallbackUrl: iyzico_callBack_url
+
+jwt:
+  secretKey: 1231231231231231231231231231231231231231231231231231231231231231
+  tokenPrefix: 'Bearer '
+  tokenExpirationForVerification: 10
+  tokenExpirationForLogin: 20
+
+
